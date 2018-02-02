@@ -8,7 +8,7 @@ cldstk-deploy is a utility for making Apache CloudStack and KVM  installations q
 - can install NFS server ****New****
 - cldstk-deploy now creates jobs for each deploy ****New****
 - cldstk-deploy now has help using -h
-- can pre download Apache CloudStack RPMS (version 4.3, 4.4 & 4.5)
+- can pre download Apache CloudStack RPMS (version 4.3, 4.4, 4.5 & 4.10)
 - can pre download KVM system template
 - runs web server to be used as ISO, RPM and system template repository
 - can install and setup cloudstack-management servers (One or many)
@@ -54,11 +54,11 @@ cldstk-deploy is a utility for making Apache CloudStack and KVM  installations q
 
 3. Download the Apache Cloudstack RPMS and Systemtemplates all at once. (OPTIONAL) - if you use “Internet” installation type. 
 
-    `python cldstkdeploy.py —-getall 4.5`
+    `python cldstkdeploy.py —-getall 4.10`
 
-4. (OPTIONAL) Build RPMS from source. ONLY 4.3, 4.4 & 4.5 for now. ONLY IF YOU DO NOT DOWNLOAD RPMS.
+4. (OPTIONAL) Build RPMS from source. ONLY 4.3, 4.4, 4.5 & 4.10 for now. ONLY IF YOU DO NOT DOWNLOAD RPMS.
 
-    `python build-4.5.x-rpms.py`
+    `python build-4.10.x-rpms.py`
 
    Takes roughly 10 minutes to build and installs additional packages.
 
@@ -84,7 +84,7 @@ Next all you have to do is answer the questions. Example shown below.
     All-in-one Server[dns/ip]: 192.168.0.29
     Install System Templates?[Y/n]: y
     Change install type to “Internet”?[Y/n]: n
-    Which version to install [‘4.3’, ‘4.4’, ‘4.5’]?: 4.5
+    Which version to install [‘4.3’, ‘4.4’, ‘4.5’, ‘4.10’]?: 4.10
     Add ssh rsa keys to ~/.ssh/known_hosts?[Y/n]: y
     jobid: 2015-07-06-22-17-45165765
     ansible hosts file successfully writing to disk…..
@@ -115,7 +115,7 @@ Next all you have to do is answer the questions. Example shown below.
     NFS Server[dns/ip]: 192.168.0.50
     NFS Secondary Storage Path[/nfsdirpath]: /secondary
     Change install type to “Internet”?[Y/n]: n
-    Which version to install [‘4.3’, ‘4.4’, ‘4.5’]?: 4.5
+    Which version to install [‘4.3’, ‘4.4’, ‘4.5’, ‘4.10’]?: 4.10
     Add ssh rsa keys to ~/.ssh/known_hosts?[Y/n]: y
     jobid: 2015-07-06-22-28-34672160
     ansible hosts file successfully writing to disk…..

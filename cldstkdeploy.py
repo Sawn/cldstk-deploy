@@ -19,8 +19,8 @@ from optparse import OptionParser
 
 
 # Supported versions on apache cloudstack
-__versionsupport__ = ['4.3', '4.4', '4.5']
-__version__ = "1.2.0"
+__versionsupport__ = ['4.3', '4.4', '4.5', '4.10']
+__version__ = "1.3.0"
 __description__ = "CloudStack Deploy is a utility for making Apache CloudStack " \
                   "and KVM installations quick, easy and painless."
 __maintainer__ = "Antone Heyward"
@@ -32,6 +32,8 @@ __systmpllocalpath__ = '/public/templates/'
 
 configs = {
     'local': {
+        '4.10': {'download': 'https://dl.dropboxusercontent.com/u/3904598/cloudstack-4.10.0.0-rpms.tar.gz', 'rpms': '',
+                'systmplfile': 'systemvm64template-4.10.0.0-kvm.qcow2.bz2'},
         '4.5': {'download': 'https://dl.dropboxusercontent.com/u/3904598/cloudstack-4.5.1-rpms.tar.gz', 'rpms': '',
                 'systmplfile': 'systemvm64template-4.5-kvm.qcow2.bz2'},
         '4.4': {'download': 'https://dl.dropboxusercontent.com/u/3904598/cloudstack-4.4.2-rpms.tar.gz', 'rpms': '',
@@ -40,6 +42,8 @@ configs = {
                 'rpms': '', 'systmplfile': 'systemvm64template-2014-01-14-master-kvm.qcow2.bz2'}
     },
     'internet': {
+        '4.10': {'download': '', 'rpms': '',
+                'systmplurl': 'http://packages.shapeblue.com/systemvmtemplate/4.10/systemvm64template-4.10-kvm.qcow2.bz2'},
         '4.5': {'download': '', 'rpms': '',
                 'systmplurl': 'http://packages.shapeblue.com/systemvmtemplate/4.5/systemvm64template-4.5-kvm.qcow2.bz2'},
         '4.4': {'download': '', 'rpms': '',
